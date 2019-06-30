@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Today's News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{date}}</ion-card-subtitle>
+        <ion-card-title>Welcome to the Ionic News Source</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Read all the most current news stories here</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Recent News</ion-label>
+      </ion-list-header>
+      <ion-item href = "/tabs/details/{{i}}" *ngFor="let news of _newsArray; let i = index" (click)="onSelect(news)" >
+                <div  style = "border:.25px solid silver; margin:2px;">
+                   <img src="{{news.urlToImage}}" alt="Smiley face">
+                    <p style="padding:5px;">{{news.title}}</p>
+                 </div>
+      </ion-item>
+    </ion-list>
+</ion-content>

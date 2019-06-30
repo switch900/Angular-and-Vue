@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            {{title}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item>
+        <ion-button right full (click)="addItem()"> <ion-icon name="add"></ion-icon> </ion-button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-input [(ngModel)]="item" placeholder="Enter new item" type="text"></ion-input>  
+  </ion-item>
+    <ion-list>
+        <ion-item-sliding *ngFor="let item of items">
+            <ion-item>               
+                <ion-button right color="danger" (click)="deleteItem(item)">
+                    <ion-icon name="trash"></ion-icon> 
+                </ion-button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item}}
+            </ion-item>
+        </ion-item-sliding>
+        <ion-item>
+            <ion-button left (click)="sortItems()">
+                <ion-icon name="git-compare"></ion-icon>Sort Alphabetically 
+            </ion-button>
+        </ion-item>
+        <ion-item>        
+<ion-item>
+  <ion-label>Total Items</ion-label>
+  <ion-badge color="success" slot="end">{{totalItems}}</ion-badge>
+</ion-item>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>News Article #{{id}}</ion-title>
+      <ion-button slot="start">
+          <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+      </ion-button>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <img src="{{items.urlToImage}}" alt="Smiley face">
+    <p>{{items.description}}</p>
+     <h2 style="text-decoration: underline">{{items.title}}</h2>
+     <h5>Author: {{items.author}}</h5>
+     <h5>Date Published: {{items.publishedAt}}</h5>
+     <p>{{items.content}}</p>
+     <p><a href = "{{items.url}}" alt="Smiley face">Continue Reading Article Here!</a></p>  
+</ion-content>
