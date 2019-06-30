@@ -1,0 +1,26 @@
+@import 
+url(https://fonts.googleapis.com/css?family=Raleway:400,
+900);
+
+body{background-color:#000;
+font-family: 
+'Raleway', sans-serif;
+
+color: 
+#fff;}
+
+table {
+  table-layout: fixed;
+}
+
+.sample{width:400px;margin:0
+auto;
+
+border:.5px
+solid 
+#aaa;padding:20px;margin-top:20px;}
+
+.btn-default {
+    display: block;
+    width: 100%;
+  }
