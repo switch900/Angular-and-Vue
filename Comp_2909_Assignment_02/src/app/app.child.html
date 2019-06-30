@@ -1,0 +1,9 @@
+<div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="center">
+    <ng-container *ngFor="let movie of _childMovieArray">       
+    <div fxFlex="0 1 calc(25% - 32px)" style="background:white;">
+            <img src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" style="width:100%;"/>
+            <h4>{{movie.title}}</h4>
+            {{movie.overview}}
+        </div>        
+    </ng-container>
+</div>

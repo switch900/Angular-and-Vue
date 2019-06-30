@@ -1,0 +1,16 @@
+<div style="background:LightSteelBlue">
+    <div style="padding:0px 50px 0px 25px;">
+    <select [(ngModel)]="selectedGenre" name="genre" style="width:175px;"
+        required (ngModelChange)="selectGenre($event)">
+        <option *ngFor="let genre of _genreArray" [ngValue]="genre.name">{{genre.name}}</option>
+    </select>
+    <div style="float: right;">
+        <button type="button" (click)="pageDecrement()">-</button>
+        {{page}}/{{totalPages}}
+        <button type="button" (click)="pageIncrement()">+</button><br><br><br>
+    </div>
+    </div>
+    <div style="display:inline-block">
+        <child [_childMovieArray]="_movieArray"></child>  
+    </div>
+</div>    
